@@ -18,7 +18,8 @@ pub fn solution() -> i32 {
         if split_split_data[0].parse::<f64>().is_ok() {
             first_num = split_split_data[0].parse::<i32>().unwrap(); 
         } else {
-            break;
+            println!("breaking on 22");
+            continue; 
         }
         
         // second num 
@@ -27,9 +28,10 @@ pub fn solution() -> i32 {
         if pos_second_num_arr[0].len() < 4 && pos_second_num_arr[0].parse::<f64>().is_ok() {
             second_num = pos_second_num_arr[0].parse::<i32>().unwrap();
         } else {
-            break;
+            println!("breaking on 32");
+            continue; 
         }
-    
+
         total_result = total_result + (first_num * second_num); 
     }
     
